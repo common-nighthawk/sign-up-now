@@ -58,7 +58,7 @@ $(document).ready(function() {
       msg = "Great! Your registration is complete."
     }
 
-    $(".flash").html(msg);
+    $(".flash h1").html(msg);
     return false;
   })
 });
