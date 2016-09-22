@@ -1,13 +1,15 @@
 $(document).ready(function() {
   $("form").submit(function(e){
     e.preventDefault();
-    $(".flash").css("color", "#d01543");
     $(".flash").css("display", "block");
-    $(".flash")[0].setAttribute("title", "error message");
+
+    var success = false;
+    var msg = "";
+    var msgColor = "";
+    var flashId = "";
 
     var ps = $("#ps").val()
     var cn = $("#cn").val()
-    var msg = ""
 
     if (ps === "") {
       msg = "Password is required."
@@ -53,12 +55,23 @@ $(document).ready(function() {
     } else if (!ps.match(/Doha/)) {
       msg = "Password must contain name of the capital and largest city of Qatar."
     } else {
-      $(".flash").css("color", "#316767");
-      $(".flash")[0].setAttribute("title", "success message");
+      success = true;
       msg = "Great! Your registration is complete."
     }
 
-    $(".flash h1").html(msg);
+    if (success) {
+      msgColor = "#316767";
+      flashId = "password-success";
+    } else {
+      msgColor = "#d01543";
+      flashId = "password-error";
+    }
+
+    $(".flash").css("color", msgColor);
+    $(".flash").attr("id", flashId);
+    $("#ps")[0].setAttribute("aria-describedby", flashId);
+    $(".flash").html("<h1>"+msg+"</h1>");
+    $(".flash").focus()
     return false;
   })
 });
