@@ -3,6 +3,7 @@ $(document).ready(function() {
     e.preventDefault();
     $(".flash").css("color", "#d01543");
     $(".flash").css("display", "block");
+    $(".flash")[0].setAttribute("title", "error message");
 
     var ps = $("#ps").val()
     var cn = $("#cn").val()
@@ -53,6 +54,7 @@ $(document).ready(function() {
       msg = "Password must contain name of the capital and largest city of Qatar."
     } else {
       $(".flash").css("color", "#316767");
+      $(".flash")[0].setAttribute("title", "success message");
       msg = "Great! Your registration is complete."
     }
 
