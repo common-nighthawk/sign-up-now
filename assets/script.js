@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("form").submit(function(e){
     e.preventDefault();
-    $(".flash").css("color", "#e81c4f");
+    $(".flash").css("color", "#d01543");
     $(".flash").css("display", "block");
 
     var ps = $("#ps").val()
@@ -52,7 +52,7 @@ $(document).ready(function() {
     } else if (!ps.match(/Doha/)) {
       msg = "Password must contain name of the capital and largest city of Qatar."
     } else {
-      $(".flash").css("color", "#5fb3b3");
+      $(".flash").css("color", "#316767");
       msg = "Great! Your registration is complete."
     }
 

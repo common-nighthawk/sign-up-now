@@ -28,12 +28,12 @@ input:last-of-type {
 
 a {
   text-decoration: none;
-  color: #69c;
+  color: #356aa0;
 }
 
 .flash {
   display: none;
-  color: #e81c4f;
+  color: #d01543;
   background: #f5f7f9;
   padding: 1em;
   border-radius: 8px;
