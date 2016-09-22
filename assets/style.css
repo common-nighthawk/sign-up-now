@@ -26,6 +26,11 @@ input:last-of-type {
   margin-left: 154px;
 }
 
+a {
+  text-decoration: none;
+  color: #69c;
+}
+
 .flash {
   display: none;
   color: #e81c4f;
@@ -42,4 +47,14 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 6vw 2em;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em;
+  background-color: #efefef;
+  text-align: right;
 }
