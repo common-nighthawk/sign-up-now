@@ -48,7 +48,7 @@ $(document).ready(function() {
     } else if (!ps.match(/d/)) {
       msg = "Password must contain the lower-case letter d."
     } else if (!ps.match(/1983/)) {
-      msg = "Required that password contain year of birth of popular acctress Kate Mara."
+      msg = "Required that password contain year of birth of popular actress Kate Mara."
     } else if (!ps.match(/Doha/)) {
       msg = "Password must contain name of the capital and largest city of Qatar."
     } else {
